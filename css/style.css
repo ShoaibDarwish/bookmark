@@ -1,0 +1,323 @@
+::selection {
+  background-color: gray;
+}
+body {
+  background: url("../bookmarks-4.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  font-family: "Permanent Marker", cursive;
+}
+.move-s .done {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: -50px;
+  border-top-right-radius: 20px;
+}
+button.btn-dark {
+  padding-inline: 25px;
+  --bs-btn-border-color: #ffffff;
+}
+
+.move-s {
+  position: relative;
+  direction: rtl;
+  overflow: hidden;
+}
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: fit-content;
+  margin: auto;
+  border-radius: 15px;
+  backdrop-filter: blur(25px);
+  background-color: #0000006b;
+}
+h3 {
+  font-family: "Caveat", cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.dotOne {
+  background-color: #f96057;
+}
+.dotTwo {
+  background-color: #f8ce52;
+}
+.dotThree {
+  background-color: #5fcf65;
+}
+.dot {
+  width: 17px;
+  height: 17px;
+  float: left;
+  margin: 5px;
+  margin-top: 25px;
+  border-radius: 50%;
+}
+.clear {
+  clear: both;
+}
+.form-group {
+  position: relative;
+  margin-block: 25px;
+}
+label {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+input[placeholder] {
+  color: rgb(60, 96, 60);
+}
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label {
+  top: -15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #f8ca43;
+  text-shadow: 3px 3px 5px #000;
+}
+.form-group input,
+.form-group textarea {
+  backdrop-filter: blur(25px);
+  background-color: #00000027;
+  border: none;
+}
+#myBtn {
+  font-family: "Caveat", cursive;
+  font-weight: 900;
+  font-size: 20px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  box-shadow: -3px 1px 2px #ffffff5e inset;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #d8d5d517;
+  color: #fff;
+}
+table thead th {
+  padding-inline: 8px;
+  padding-block: 10px;
+}
+table thead tr {
+  background-color: #6767673b;
+  border: 2px solid #000;
+  font-size: 17px;
+  color: #f8ca43;
+  text-shadow: 3px 3px 5px #000;
+}
+tbody td {
+  margin-bottom: 5px;
+  border-bottom: 2px solid #00000046;
+  padding-top: 10px;
+  padding-inline: 15px;
+  color: #fff;
+}
+tbody tr:hover {
+  background-color: #00000027;
+  font-size: 19px;
+}
+.boldSpan {
+  font-size: 20px;
+  font-weight: 600;
+}
+#siteUrlErorr {
+  max-width: 600px;
+}
+section {
+  position: relative;
+  top: 150px;
+  z-index: 5;
+  right: 800px;
+}
+#siteUrlErorr {
+  max-width: 600px;
+}
+.login-box {
+  position: absolute;
+  overflow: hidden;
+  height: 39px;
+  width: 100px;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(50px);
+
+  border: 1px solid rgba(255, 255, 255, 05);
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+.login-box:hover {
+  height: 450px;
+  width: 25rem;
+
+}
+.login-box:hover h2 {
+  top: 20px;
+}
+
+section h2 {
+  position: relative;
+  top: 198px;
+  font-size: 2em;
+  color: #ffffff4a;
+  text-shadow: 8px 1px 1px #f4e2e200;
+  text-align: center;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+.input-box {
+  position: relative;
+  margin: 50px 0;
+  width: 310px;
+  border-bottom: 2px solid #fff;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  font-size: 1em;
+  outline: none;
+  color: #fff;
+  padding: 0 35px 0 5px;
+}
+.remember-forget {
+  font-size: 0.9em;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.remember-forget label input {
+  margin-right: 5px;
+}
+.rememberme {
+  margin-top: 75px;
+  margin-inline: 125px;
+}
+.remember-forget a {
+  color: inherit;
+  text-decoration: none;
+  margin-block: 7px;
+}
+.remember-forget a:hover {
+  text-decoration: underline;
+}
+section button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 700;
+}
+.register-link {
+  font-size: 16px;
+  margin: 25px 0 10px;
+}
+.register {
+  font-size: large;
+  color: #f8ca43;
+  text-shadow: 1px 1px 8px #000;
+  font-weight: 600;
+}
+
+@media (max-width: 356px) {
+  .login-box {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    border-radius: 0;
+  }
+  .input-box {
+    width: 290px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+.dance {
+  animation: MoveUpDown 1.5s linear infinite;
+  position: absolute;
+  position: absolute;
+  top: 70px;
+  left: 35px;
+  font-weight: 600;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.shoaib {
+  animation: circleScale 3s linear infinite;
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  font-size: small;
+  width: 50px;
+  height: 50px;
+  backdrop-filter: blur(60px);
+  border: 1px solid #9795955f;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 50%;
+}
+@keyframes circleScale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

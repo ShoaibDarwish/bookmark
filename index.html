@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ^-->
+    <link name="author" content="Shoaib Darwish" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link name="description" content="" />
+    <link rel="icon" href="" />
+    <!-- ^bootstrab -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ^font icon css -->
+    <link rel="stylesheet" href="css/fontello.css" />
+
+    <!-- ^font css -->
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ^main css link -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body>
+    <section>
+      <div class="login-box">
+        <form>
+          <h2>Login</h2>
+          <div class="input-box">
+            <input type="text" required id="name" />
+            <label for="name">Name</label>
+          </div>
+          <div class="input-box">
+            <input type="password" required id="password" />
+            <label for="password">Password</label>
+          </div>
+          <div class="remember-forget">
+            <label for="reme"
+              ><input
+                id="reme"
+                type="checkbox"
+                class="rememberme"
+              />Remember</label
+            >
+            <a href="#">Forgot Password</a>
+            <button type="submit" onclick="login()">Login</button>
+            <div class="register-link">
+              <p>
+                Dont't have an account ?<a href="#"
+                  ><span class="register">Register</span></a
+                >
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="container py-4 my-5">
+      <div class="overlay">
+        <div class="move-s">
+          <div class="dot dotOne"></div>
+          <div class="dot dotTwo"></div>
+          <div class="dot dotThree"></div>
+          <div class="clear"></div>
+
+          <img class="done" src="./bookmarks-4.png" />
+        </div>
+
+        <div class="form-group mx-5">
+          <input
+            oninput="searchMarks()"
+            class="form-control"
+            type="search"
+            id="searchInput"
+          />
+          <label for="searchInput" class="h4 text-white"
+            ><i class="icon-search"></i>Search</label
+          >
+        </div>
+
+        <div class="w-75 mx-auto my-5">
+          <h3 class="text-white">Bookmarker</h3>
+          <hr />
+          <h3 class="text-white fs-2">
+            <i class="icon-bookmark"></i>Bookmark your favorite sites
+            <i class="icon-bookmark"></i>
+          </h3>
+
+          <div class="form-group mb-3">
+            <input
+              oninput="bookmarkName()"
+              type="text"
+              class="form-control"
+              id="bookNameID"
+              placeholder="Bookmark Name"
+            />
+            <label for="bookNameID">
+              <i class="icon-book"></i>
+              Site Name</label
+            >
+            <div class="alert alert-danger d-none" id="nameErorr">
+              You can use any shorts name ,
+              <span class="boldSpan"
+                >but not less than 'three' characters
+              </span>
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <input
+              oninput="urlSiteValidation()"
+              type="text"
+              class="form-control"
+              id="siteUrl"
+              placeholder="Website URL"
+              value="https://"
+            />
+            <label for="siteUrl">
+              <i class="icon-link"></i>
+              Site URL
+            </label>
+            <div class="alert alert-danger d-none" id="siteUrlErorr">
+              It must be write'<span class="boldSpan">ULR</span> like
+              <span class="boldSpan">https://www.google.com/</span> 'or'
+              <span class="boldSpan">www.goole.come</span> and it's necessary to
+              make sure there are
+              <span class="boldSpan bg-warning">https://</span>and
+              <span class="boldSpan bg-warning">www.</span>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <button class="btn btn-dark" onclick="addSubmit()" id="myBtn">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <table class="w-50 mx-auto py-5">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="myBody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="dance">
+      <span
+        ><a href="https://www.facebook.com/Routelearning/" class="text-light"
+          >Route</a
+        ></span
+      >
+    </p>
+    <p class="shoaib">
+      <a
+        href="https://www.linkedin.com/in/shoaib-darwish-200082156/"
+        class="text-white fw-bold"
+        >Shoaib</a
+      >
+    </p>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
